@@ -1,0 +1,190 @@
+<!-- Homework Questions
+
+3). Margins, padding, and borders are all used in CSS to control the boundaries and style of elements. Margins measure the space outside borders, which can create space between other elements.
+Borders are intuitive, in that they are the boundaries of elements. Padding is the space inside the borders, in between the element's content. Essentially, if there were a rectangle, the perimeter would be the border,
+the margins would be the space outside, and the padding the space inside.
+
+4a). display: flex turns a container element into a flex container, enabling flex content for all children. 
+
+4b). flex-direction determines the primary axis/direction of the flex container (row, column, and the reverse of each).
+
+4c). flex-wrap determines whether content will fit onto a single line or wrap onto multiple lines (no-wrap, wrap, and wrap-reverse).
+
+4d). justify-content defines the alignment along the main axis and distributes free space if necessary (flex-starter, flex-end, center, space-between, and space-around).
+align-items defines how flex items are displayed along the cross axis of a flex container (stretch, flex-start/start/self-start, flex-end/end/self-end, center, and baseline).
+
+4e). align-content aligns elements in a flex container lines when there is extra space in the cross-axis. It is used like justify-content but for the cross-axis.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Computer Science | Fordham</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway+Thin">
+    </head>
+    <body>
+        <div class="parent-container">
+
+                <div class="majors-content-container">
+                    <div class="majors.text"><p><b>Majors and Minors</b></p></div>
+                    <div class="passion-acceleration">
+                        <p>What's Your Passion?</p>
+                        <p>Accelerated Degree Programs</p>
+                    </div>
+                    <div class="major-button"><b>Majors and Minors</b></div>
+                </div>
+
+            <div class="computer-science-container">
+                <div class="computer-science-content-container">
+                    <div class="nav">
+
+                        Home
+                        <span class="divider">/</span>
+                        Admissions and Aid
+                        <span class="divider">/</span>
+                        Undergraduate Admission
+                        <span class="divider">/</span>
+                        Majors and Minors
+                        <span class="divider">/</span>
+                        <span class="maroon-special">Computer Science</span>
+
+                    </div>
+                    <div class= "major-name">
+                    <h1><span class="maroon-special">Computer Science</span></h1>
+                    </div>
+                    <div class="degree-information">
+                        <p>Degree Options: Major, Minor</p>
+                        <p>Locations: Lincoln Center, Rose Hill</p>
+                        <p>Visit the <span class="maroon-special"><u>Computer and Information Science Department</u></span></p>
+                    </div>
+                    <div class="major-description">
+                        <h3>Wherever there’s a computer, there’s a skilled person developing, maintaining, hacking, advancing or simply using it. Be that person.</h3>
+                        <div class="image-container">
+                            <img src="CS_page_image.jpeg" alt="Computer Science Image">
+                        </div>
+                        <p>It’s difficult to imagine life without computers when they’re so central to our information-driven global society. 
+                            But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a degree in computer science from Fordham’s department of Computer and Information Sciences.</p>
+                        <p>The computer science major emphasizes science and technology, including software design and programming, computer architecture and functions, and the development of an ability to analyze and solve problems in using the computer as a tool.</p>
+                        <p>Get inspired by the classes we offer. Programming. Bioinformatics. Robotics. Video game design. Cyber security. Networking. Database management. Health and medical informatics.</p>
+                        <p>Our faculty members are active researchers driven by intellectual curiosity and the desire to make an impact. Join them in one of our labs. Requirements: open mind, warm heart, and lots of passion.</p>
+                        <p>You’ll learn more than computer science here. You’ll also study philosophy, theology, history, mathematics, languages, and the performing arts through Fordham’s common core curriculum, the centerpiece of our liberal arts education. We want you to excel in your field—and as a human being.</p>
+                    </div>
+                </div>
+            </div>
+        <style>
+
+            body {
+                height: 100vh;
+            }
+
+            .parent-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                font-family: 'Raleway', sans-serif;
+            }
+
+            .computer-science-container {
+                order: 1;
+                padding: 0 50px;
+            }
+
+            .majors-content-container {
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                border-right: 1px solid #e7ebe7;
+                margin: 20px 0px;
+                padding: 0 50px;
+                color: rgb(144, 0, 40);
+                width: 200px;
+            }
+
+            .divider {
+                padding: 0 5px;
+            }
+
+            @media screen and (min-width: 1200px) {
+
+                .parent-container {
+                    flex-direction: row;
+                }
+                .computer-science-container {
+                    width: 900px;
+                    order: 2;
+                }
+
+                .majors-container {
+                    width: 300px;
+                    order: 1;
+                }
+            }
+
+            .major-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: #8c0027;
+                color:white;
+                margin: 20px 0;
+                height: 50px;
+                width: 200px;
+            }
+
+            .passion-acceleration {
+                background-color: #e9e9e9;
+                color: #333;
+                font-size: 13px;
+                border-left: 1px solid rgb(144, 0, 40);
+                padding: 2px;
+                padding-left: 10px;
+            }
+
+            .computer-science-container .computer-science-content-container h1 {
+                margin: 30px 0;
+            }
+
+            .computer-science-container {
+                color: #333;
+            }
+
+            .maroon-special {
+                color: rgb(144, 0, 40);
+            }
+
+            .degree-information p {
+                line-height: 0.5;
+            }
+
+            .major-name {
+                font-size: 1.5em;
+            }
+
+            .major-description h3 {
+                font-weight: 150;
+                margin-top: 50px;
+                margin-right: 50px;
+            }
+
+            .major-description p {
+                margin: 35px 0;
+                line-height: 1.5;
+            }
+
+            img {
+                float: right;
+                margin: 20px 20px;
+                width: 250px;
+                height: 250px;
+            }
+
+        </style>
+
+    </body>
+</html>

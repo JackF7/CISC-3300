@@ -1,1 +1,33 @@
+body {
+    text-align: center;
+    color: red;
+    font-family: sans-serif
+}
 
+p {
+    color: blue;
+}
+
+.color-class {
+    color: purple;
+}
+
+#color-id {
+    color: green;
+}
+
+.color-class > p {
+    color: cyan;
+}
+
+.color-class span {
+    color: yellow;
+}
+
+.color-class + span {
+    color: pink;
+}
+
+.color-class ~ div {
+    color: navy;
+}

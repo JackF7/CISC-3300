@@ -1,0 +1,25 @@
+body {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, rgb(183, 65, 183), rgb(6, 80, 105));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

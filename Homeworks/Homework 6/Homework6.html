@@ -1,0 +1,44 @@
+<!-- Homework 6 Responses
+
+Questions 1 - 3
+
+1). Hyper Text Transfer Protocol (HTTP) controls how the internet communicates between clients and servers via requests and responses. It is a client-server
+protocol that fetches resources on the internet. There are five different HTTP request methods: get, post, put, patch, and delete.
+- get is used solely to retrieve/request data. 
+- post is used to submit data to a specified resource. Generally, this is something to be saved and changes the server.
+- put is a method that updates a resource by replacing current representations of the target resource with the request payload or creating a resource.
+- patch partially modifies a resource.
+- delete deletes a resource.
+
+2). An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a set of rules and
+tools and defines methods that applications can use to exchange information. 
+JavaScript Object Notation (JSON) is a lightweight data interchange format. It is easy for humans to read and easy for machines to parse.
+JSON is text data that JS is ready to parse into JS objects and vice versa. JSON is transmitted as a string from servers to web browsers (deserializing).
+The JSON object also has a method called stringify(). This method serializes an object, converting them into a string using JSON notation so it can be sent from the browser back to a server. 
+
+3). Asynchronous JavaScript And XML (AJAX) is a technique for loading data into a page asynchronously.
+Browsers have a XMLHttpRequest object built in to allow asynchronous requests without reloading the page. 
+Asynchronous code allows certain operations to be performed independently of the main program flow; allows code blocks to execute at a future point in time. 
+
+-->
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homework 6</title>
+        <link rel="stylesheet" href="Homework6.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="Homework6.js"></script>
+    </head>
+    <body>
+
+        <div id="weather">
+            <h1>Current Weather</h1>
+            <h2>New York City</h2>
+            <p id="location"></p>
+            <p id="temperature">Temperature: unknown</p>
+            <p id="windSpeed">Wind Speed: unknown</p>
+        </div>
+
+    </body>
+</html>
